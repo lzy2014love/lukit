@@ -1,0 +1,34 @@
+{
+  "name": "@lukit/css",
+  "version": "1.0.0",
+  "private": true,
+  "description": "css 样式工具",
+  "main": "./dist/reset.min.css",
+  "scripts": {
+    "build": "uglifycss src/reset.css > dist/reset.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzy2014love/lukit.git"
+  },
+  "keywords": [
+    "css",
+    "style",
+    "css reset",
+    "modern css reset",
+    "css tool",
+    "css toolkit"
+  ],
+  "files": [
+    "./dist"
+  ],
+  "author": "lzy <lzy2014love@outlok.com> (https://ptymt.cn)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lzy2014love/lukit/issues"
+  },
+  "homepage": "https://github.com/lzy2014love/lukit#readme",
+  "devDependencies": {
+    "uglifycss": "^0.0.29"
+  }
+}

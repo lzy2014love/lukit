@@ -1,0 +1,32 @@
+{
+  "name": "@lukit/util",
+  "version": "1.0.0",
+  "private": true,
+  "description": "js 工具",
+  "main": "./dist/reset.min.js javascript",
+  "scripts": {
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzy2014love/lukit.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "util",
+    "js tool",
+    "javascript toolkit"
+  ],
+  "files": [
+    "./dist"
+  ],
+  "author": "lzy <lzy2014love@outlok.com> (https://ptymt.cn)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lzy2014love/lukit/issues"
+  },
+  "homepage": "https://github.com/lzy2014love/lukit#readme",
+  "devDependencies": {},
+  "sideEffects": false
+}
