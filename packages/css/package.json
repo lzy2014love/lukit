@@ -1,6 +1,6 @@
 {
   "name": "@lukit/css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "css 样式工具",
   "main": "sample/index.min.css",
   "module": "sample/index.min.css",

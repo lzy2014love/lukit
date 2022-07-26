@@ -1,6 +1,6 @@
 {
   "name": "@lukit/util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js 工具",
   "type": "module",
   "main": "dist/index.umd.cjs",
