@@ -5,6 +5,7 @@ export function once<T extends Function>(this: unknown, fn: T): T {
   let didCall = false
   let result: unknown
 
+  // eslint-disable-next-line func-names
   return function () {
     if (didCall) {
       return result

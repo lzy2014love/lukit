@@ -46,16 +46,16 @@ export const { isArray } = Array
  * @returns {boolean} Returns `true` if `value` is an object, else `false`.
  * @example
  *
- * _.isObject({});
+ * isObject({});
  * // => true
  *
- * _.isObject([1, 2, 3]);
+ * isObject([1, 2, 3]);
  * // => true
  *
- * _.isObject(_.noop);
+ * isObject(noop);
  * // => true
  *
- * _.isObject(null);
+ * isObject(null);
  * // => false
  */
 export function isObject(value: unknown): value is object {
@@ -110,13 +110,13 @@ export function isEmptyObject(obj: unknown): obj is Record<string, never> {
  * @returns {boolean} Returns `true` if `value` is nullish, else `false`.
  * @example
  *
- * _.isNil(null);
+ * isNil(null);
  * // => true
  *
- * _.isNil(void 0);
+ * isNil(void 0);
  * // => true
  *
- * _.isNil(NaN);
+ * isNil(NaN);
  * // => false
  */
 export function isNil(value: any): value is Nil {
@@ -130,10 +130,10 @@ export function isNil(value: any): value is Nil {
  * @returns {boolean} Returns `true` if `value` is `null`, else `false`.
  * @example
  *
- * _.isNull(null);
+ * isNull(null);
  * // => true
  *
- * _.isNull(void 0);
+ * isNull(void 0);
  * // => false
  */
 export function isNull(value: any): value is null {
@@ -147,10 +147,10 @@ export function isNull(value: any): value is null {
  * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
  * @example
  *
- * _.isUndefined(undefined);
+ * isUndefined(undefined);
  * // => true
  *
- * _.isUndefined(void 0);
+ * isUndefined(void 0);
  * // => false
  */
 export function isUndefined(value: any): value is undefined {
@@ -161,22 +161,22 @@ export function isUndefined(value: any): value is undefined {
  * Checks if `value` is classified as a `Number` primitive or object.
  *
  * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
- * classified as numbers, use the `_.isFinite` method.
+ * classified as numbers, use the `isFinite` method.
  *
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a number, else `false`.
  * @example
  *
- * _.isNumber(3);
+ * isNumber(3);
  * // => true
  *
- * _.isNumber(Number.MIN_VALUE);
+ * isNumber(Number.MIN_VALUE);
  * // => true
  *
- * _.isNumber(Infinity);
+ * isNumber(Infinity);
  * // => true
  *
- * _.isNumber('3');
+ * isNumber('3');
  * // => false
  */
 export function isNumber(value: any): value is number {
@@ -195,16 +195,16 @@ export function isNumber(value: any): value is number {
  * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
  * @example
  *
- * _.isNaN(NaN);
+ * isNaN(NaN);
  * // => true
  *
- * _.isNaN(new Number(NaN));
+ * isNaN(new Number(NaN));
  * // => true
  *
  * isNaN(undefined);
  * // => true
  *
- * _.isNaN(undefined);
+ * isNaN(undefined);
  * // => false
  */
 export function isNaN(value: any): value is number {
@@ -222,10 +222,10 @@ export function isNaN(value: any): value is number {
  * @returns {boolean} Returns `true` if `value` is a regexp, else `false`.
  * @example
  *
- * _.isRegExp(/abc/);
+ * isRegExp(/abc/);
  * // => true
  *
- * _.isRegExp('/abc/');
+ * isRegExp('/abc/');
  * // => false
  */
 export function isRegExp(value: any): value is RegExp {
@@ -243,10 +243,10 @@ export function isRegExp(value: any): value is RegExp {
  * @returns {boolean} Returns `true` if `value` is an array buffer, else `false`.
  * @example
  *
- * _.isArrayBuffer(new ArrayBuffer(2));
+ * isArrayBuffer(new ArrayBuffer(2));
  * // => true
  *
- * _.isArrayBuffer(new Array(2));
+ * isArrayBuffer(new Array(2));
  * // => false
  */
 export function isArrayBuffer(value: any): value is ArrayBuffer {
@@ -264,10 +264,10 @@ export function isArrayBuffer(value: any): value is ArrayBuffer {
  * @returns {boolean} Returns `true` if `value` is a function, else `false`.
  * @example
  *
- * _.isFunction(_);
+ * isFunction(_);
  * // => true
  *
- * _.isFunction(/abc/);
+ * isFunction(/abc/);
  * // => false
  */
 export function isFunction(value: any): value is Fn {
@@ -286,24 +286,21 @@ export function isFunction(value: any): value is Fn {
  * not a function and has a `value.length` that's an integer greater than or
  * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
  *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
+
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
  * @example
  *
- * _.isArrayLike([1, 2, 3]);
+ * isArrayLike([1, 2, 3]);
  * // => true
  *
- * _.isArrayLike(document.body.children);
+ * isArrayLike(document.body.children);
  * // => true
  *
- * _.isArrayLike('abc');
+ * isArrayLike('abc');
  * // => true
  *
- * _.isArrayLike(_.noop);
+ * isArrayLike(noop);
  * // => false
  */
 export function isArrayLike(value: any) {
@@ -311,28 +308,24 @@ export function isArrayLike(value: any) {
 }
 
 /**
- * This method is like `_.isArrayLike` except that it also checks if `value`
+ * This method is like `isArrayLike` except that it also checks if `value`
  * is an object.
  *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is an array-like object,
  *  else `false`.
  * @example
  *
- * _.isArrayLikeObject([1, 2, 3]);
+ * isArrayLikeObject([1, 2, 3]);
  * // => true
  *
- * _.isArrayLikeObject(document.body.children);
+ * isArrayLikeObject(document.body.children);
  * // => true
  *
- * _.isArrayLikeObject('abc');
+ * isArrayLikeObject('abc');
  * // => false
  *
- * _.isArrayLikeObject(_.noop);
+ * isArrayLikeObject(noop);
  * // => false
  */
 export function isArrayLikeObject(value: any) {
@@ -350,10 +343,10 @@ export function isArrayLikeObject(value: any) {
  * @returns {boolean} Returns `true` if `value` is a boolean, else `false`.
  * @example
  *
- * _.isBoolean(false);
+ * isBoolean(false);
  * // => true
  *
- * _.isBoolean(null);
+ * isBoolean(null);
  * // => false
  */
 export function isBoolean(value: any): value is boolean {
@@ -371,10 +364,10 @@ export function isBoolean(value: any): value is boolean {
  * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
  * @example
  *
- * _.isBuffer(new Buffer(2));
+ * isBuffer(new Buffer(2));
  * // => true
  *
- * _.isBuffer(new Uint8Array(2));
+ * isBuffer(new Uint8Array(2));
  * // => false
  */
 export function isBuffer(value: any): value is Buffer {
@@ -382,7 +375,7 @@ export function isBuffer(value: any): value is Buffer {
 }
 
 /**
- * The base implementation of `_.isDate` without Node.js optimizations.
+ * The base implementation of `isDate` without Node.js optimizations.
  *
  * @private
  * @param {*} value The value to check.
@@ -408,16 +401,16 @@ export function isDate(value: any): value is Date {
  *   this.a = 1;
  * }
  *
- * _.isPlainObject(new Foo);
+ * isPlainObject(new Foo);
  * // => false
  *
- * _.isPlainObject([1, 2, 3]);
+ * isPlainObject([1, 2, 3]);
  * // => false
  *
- * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * isPlainObject({ 'x': 0, 'y': 0 });
  * // => true
  *
- * _.isPlainObject(Object.create(null));
+ * isPlainObject(Object.create(null));
  * // => true
  */
 export function isPlainObject(value: any): value is object {
@@ -444,10 +437,10 @@ export function isPlainObject(value: any): value is object {
  * @returns {boolean} Returns `true` if `value` is an error object, else `false`.
  * @example
  *
- * _.isError(new Error);
+ * isError(new Error);
  * // => true
  *
- * _.isError(Error);
+ * isError(Error);
  * // => false
  */
 export function isError(value: any): value is Error {
@@ -468,24 +461,20 @@ export function isError(value: any): value is Error {
  * **Note:** This method is based on
  * [`Number.isInteger`](https://mdn.io/Number/isInteger).
  *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is an integer, else `false`.
  * @example
  *
- * _.isInteger(3);
+ * isInteger(3);
  * // => true
  *
- * _.isInteger(Number.MIN_VALUE);
+ * isInteger(Number.MIN_VALUE);
  * // => false
  *
- * _.isInteger(Infinity);
+ * isInteger(Infinity);
  * // => false
  *
- * _.isInteger('3');
+ * isInteger('3');
  * // => false
  */
 export function isInteger(value: any): value is number {
@@ -493,7 +482,7 @@ export function isInteger(value: any): value is number {
 }
 
 /**
- * The base implementation of `_.isMap` without Node.js optimizations.
+ * The base implementation of `isMap` without Node.js optimizations.
  *
  * @private
  * @param {*} value The value to check.
@@ -504,7 +493,7 @@ export function isMap(value: any): value is Map<any, any> {
 }
 
 /**
- * The base implementation of `_.isSet` without Node.js optimizations.
+ * The base implementation of `isSet` without Node.js optimizations.
  *
  * @private
  * @param {*} value The value to check.
@@ -525,10 +514,10 @@ export function baseIsSet(value: any): value is Set<any> {
  * @returns {boolean} Returns `true` if `value` is a string, else `false`.
  * @example
  *
- * _.isString('abc');
+ * isString('abc');
  * // => true
  *
- * _.isString(1);
+ * isString(1);
  * // => false
  */
 export function isString(value: any): value is string {
@@ -538,18 +527,14 @@ export function isString(value: any): value is string {
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.
  *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
  * @example
  *
- * _.isSymbol(Symbol.iterator);
+ * isSymbol(Symbol.iterator);
  * // => true
  *
- * _.isSymbol('abc');
+ * isSymbol('abc');
  * // => false
  */
 export function isSymbol(value: any): value is symbol {
@@ -559,18 +544,14 @@ export function isSymbol(value: any): value is symbol {
 /**
  * Checks if `value` is classified as a `WeakMap` object.
  *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a weak map, else `false`.
  * @example
  *
- * _.isWeakMap(new WeakMap);
+ * isWeakMap(new WeakMap);
  * // => true
  *
- * _.isWeakMap(new Map);
+ * isWeakMap(new Map);
  * // => false
  */
 export function isWeakMap(value: any): value is WeakMap<object, any> {
@@ -580,18 +561,14 @@ export function isWeakMap(value: any): value is WeakMap<object, any> {
 /**
  * Checks if `value` is classified as a `WeakSet` object.
  *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a weak set, else `false`.
  * @example
  *
- * _.isWeakSet(new WeakSet);
+ * isWeakSet(new WeakSet);
  * // => true
  *
- * _.isWeakSet(new Set);
+ * isWeakSet(new Set);
  * // => false
  */
 export function isWeakSet(value: any): value is WeakSet<any> {

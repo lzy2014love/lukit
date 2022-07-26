@@ -30,6 +30,7 @@ export const generateUuid = (function (): () => string {
   } else {
     getRandomValues = function (bucket: Uint8Array): Uint8Array {
       for (let i = 0; i < bucket.length; i++) {
+        // eslint-disable-next-line no-param-reassign
         bucket[i] = Math.floor(Math.random() * 256)
       }
       return bucket
@@ -43,6 +44,7 @@ export const generateUuid = (function (): () => string {
     _hex.push(i.toString(16).padStart(2, '0'))
   }
 
+  // eslint-disable-next-line no-shadow
   return function generateUuid(): string {
     // get data
     getRandomValues(_data)

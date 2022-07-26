@@ -2,7 +2,11 @@
   "name": "lukit",
   "private": true,
   "scripts": {
-    "lint": "eslint 'packages/**/*.{js,ts}' --fix"
+    "lint": "eslint 'packages/**/*.{js,ts}' --fix",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "build": "pnpm -r build",
+    "publish": "pnpm run build && pnpm -r publish"
   },
   "devDependencies": {
     "@types/node": "^17.0.41",
@@ -15,6 +19,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.2",
     "typescript": "^4.7.3",
-    "vite": "^2.9.11"
+    "vite": "3.0.0",
+    "vitest": "^0.18.0"
   }
 }
