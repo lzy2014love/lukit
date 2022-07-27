@@ -23,6 +23,6 @@
       "@lukit/*": ["packages/*/src"]
     }
   },
-  "include": ["packages/*/src"],
+  "include": ["packages/*/src", "samples/*/src"],
   "exclude": ["node_modules"]
 }
