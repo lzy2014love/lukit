@@ -1,13 +1,13 @@
 {
   "name": "@lukit/css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "css 样式工具",
-  "main": "sample/index.min.css",
-  "module": "sample/index.min.css",
-  "browser": "sample/index.min.css",
+  "main": "src/index.min.css",
+  "module": "src/index.min.css",
+  "browser": "src/index.min.css",
   "scripts": {
-    "preview": "vite sample",
-    "build": "uglifycss src/index.css --output sample/index.min.css"
+    "prepare": "npm run build",
+    "build": "uglifycss src/index.css --output src/index.min.css"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   ],
   "files": [
     "src/index.css",
-    "sample/index.min.css"
+    "src/index.min.css"
   ],
   "author": "lzy <lzy2014love@outlok.com> (https://ptymt.cn)",
   "license": "MIT",

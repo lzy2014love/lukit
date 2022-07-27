@@ -1,0 +1,14 @@
+{
+  "name": "@lukit/util-sample",
+  "private": true,
+  "description": "sample",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "lzy <lzy2014love@outlok.com> (https://ptymt.cn)",
+  "license": "MIT",
+  "dependencies": {
+    "@lukit/css": "workspace:*",
+    "@lukit/util": "workspace:*"
+  }
+}

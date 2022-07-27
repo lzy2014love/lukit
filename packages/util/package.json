@@ -1,20 +1,15 @@
 {
   "name": "@lukit/util",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "js 工具",
   "type": "module",
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
-  "typings": "src/index.ts",
   "browser": "dist/index.umd.cjs",
-  "exports": {
-    ".": {
-      "import": "dist/index.js",
-      "require": "dist/index.umd.cjs"
-    }
-  },
+  "typings": "src/index.ts",
   "scripts": {
-    "build": "vite build --mode lib"
+    "build": "vite build --mode lib",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
