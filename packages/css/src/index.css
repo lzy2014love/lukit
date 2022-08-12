@@ -37,6 +37,10 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -108,6 +112,17 @@ select {
   position: sticky;
   bottom: 0;
   z-index: 1020;
+}
+
+/* 水平排列 */
+.lk-flex {
+  display: flex;
+}
+
+/* 垂直排列 */
+.lk-flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 /* 水平、垂直居中 */

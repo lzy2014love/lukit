@@ -5,3 +5,7 @@ node_modules/
 pnpm-lock.yaml
 .eslintrc.js
 vite.config.ts
+vitest.config.ts
+commitlint.config.js
+*.spec.js
+*.test.js

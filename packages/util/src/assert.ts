@@ -5,7 +5,7 @@ import { AssertError } from './error'
  * @param value 判断值
  * @param message 错误消息
  */
-export function assert(value?: unknown, message?: string) {
+export function assert(value: unknown, message?: string) {
   if (!value) {
     throw new AssertError(message ?? 'Assertion Failed')
   }

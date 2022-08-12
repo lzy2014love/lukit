@@ -14,6 +14,10 @@ export function getErrorMessage(err: any): string {
   return String(err)
 }
 
+/**
+ * 编译到 es6 正常
+ * @link {https://www.hikerpig.cn/2018-04-02-Customize-Error-in-Typescript/}
+ */
 export class CustomError extends Error {
   constructor(message?: string) {
     super('CustomError')
