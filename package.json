@@ -1,5 +1,6 @@
 {
   "name": "lukit",
+  "version": "1.0.4",
   "private": true,
   "scripts": {
     "lint": "eslint --fix 'packages/**/*.{js,jsx,ts,tsx}'",
@@ -32,6 +33,5 @@
   "lint-staged": {
     "packages/**/*.{js,jsx,ts,tsx}": "eslint --fix"
   },
-  "version": "1.0.3",
   "packageManager": "pnpm@7.9.5"
 }
