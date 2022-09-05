@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
     "outDir": "dist",
     "sourceMap": false,
     "target": "es2020",
@@ -20,6 +18,5 @@
     "types": ["node", "vitest/globals"],
     "declaration": true
   },
-  "include": ["packages/*/src", "apps/*/src"],
   "exclude": ["node_modules", "dist"]
 }

@@ -4,9 +4,11 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     'max-len': [0, 120, 2, { ignoreUrls: true }],
-    'import/extensions': ['error', 'always', { ts: 'never' }],
     'no-use-before-define': 'off',
     'max-classes-per-file': 'off',
+    'import/no-unresolved': 'off',
+    // 'import/extensions': ['error', 'always', { ts: 'never' }],
+    'import/extensions': 'off',
     'no-plusplus': 'off',
     'no-underscore-dangle': 'off',
     'no-bitwise': 'off',

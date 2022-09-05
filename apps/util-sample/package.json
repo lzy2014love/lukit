@@ -3,7 +3,10 @@
   "private": true,
   "description": "sample",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "dev-node": "node index.js",
+    "build": "vite build",
+    "preview": " vite preview --host 127.0.0.1"
   },
   "author": "lzy <lzy2014love@outlok.com> (https://ptymt.cn)",
   "license": "MIT",
